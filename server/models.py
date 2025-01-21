@@ -6,7 +6,6 @@ metadata = MetaData()
 
 db = SQLAlchemy(metadata=metadata)
 
-
 class Pet(db.Model, SerializerMixin):
     __tablename__ = 'pets'
 
