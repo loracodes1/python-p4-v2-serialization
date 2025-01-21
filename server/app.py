@@ -30,6 +30,7 @@ def pet_by_id(id):
     else:
         body = {'message': f'Pet {id} not found.'}
         status = 404
+
     return make_response(body, status)
 
 @app.route('/species/<string:species>')
@@ -41,7 +42,6 @@ def pet_by_species(species):
             'pets': pets
             }
     return make_response(body, 200)
-
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
